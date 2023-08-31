@@ -1,0 +1,60 @@
+.App{
+  min-height: 100vh;
+  background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+}
+
+.search-form{
+  min-height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-bar
+{
+width: 50%;
+border: none;
+padding: 10px;
+}
+
+.search-button
+{
+  border:none;
+  background: navy;
+  padding:  10px 20px;
+  color: whitesmoke;
+}
+
+.recipes{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.filter-bar {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.filter-bar label {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.filter-bar select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+
+/* Additional styling for the ingredient input */
+.ingredients-bar {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  width: 50%;
+  margin-right: 20px;
+}
