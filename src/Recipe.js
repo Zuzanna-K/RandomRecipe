@@ -1,7 +1,7 @@
 import React from 'react';
 import style from './recipe.module.css';
 
-const Recipe = ({ title, cuisineType, image, ingredients, healthLabels, selectedIngredient }) => {
+const Recipe = ({ title, image, ingredients, selectedIngredient, url }) => {
   const filteredIngredients = ingredients.filter(ingredient =>
     !selectedIngredient || ingredient.food.includes(selectedIngredient)
   );
@@ -9,14 +9,7 @@ const Recipe = ({ title, cuisineType, image, ingredients, healthLabels, selected
   return (
     <div className={style.recipe}>
       <h1>{title}</h1>
-      <div className="cuisine-labels">
-        <p>cuisineTypes:</p>
-        <ul>
-          {cuisineType.map((label, index) => (
-            <li key={index}>{label}</li>
-          ))}
-        </ul>
-      </div>
+
       <img className={style.image} src={image} alt="" />
       <ol>
   {ingredients.map((ingredient, index) => (
@@ -24,14 +17,7 @@ const Recipe = ({ title, cuisineType, image, ingredients, healthLabels, selected
   ))}
 </ol>
 
-      <div className="health-labels">
-        <p>Health Labels:</p>
-        <ul>
-          {healthLabels.map((label, index) => (
-            <li key={index}>{label}</li>
-          ))}
-        </ul>
-      </div>
+<p>Link to Recipe: <a href={url} target="_blank" rel="noopener noreferrer">{url}</a></p>
     </div>
   );
 };

@@ -93,7 +93,7 @@ const App = () => {
   return (
     <div className="App">
       <form onSubmit={handleSearchClick} className="search-form">
-        <input className="search-bar" type="text" value={search} onChange={updateSearch} placeholder="Search for dish" />
+        <input className="ingredients-bar" type="text" value={search} onChange={updateSearch} placeholder="Search for dish" />
         <input
         className="ingredients-bar"
         type="text"
@@ -180,7 +180,8 @@ const App = () => {
             image={recipe.image}
             ingredients={recipe.ingredients}
             healthLabels={recipe.healthLabels}
-            selectedIngredient={selectedIngredient} 
+            selectedIngredient={selectedIngredient}
+            url={recipe.url} 
           />
         </div>
       )}
